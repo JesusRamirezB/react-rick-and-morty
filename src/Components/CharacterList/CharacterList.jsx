@@ -11,7 +11,7 @@ function CharacterList() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${import.meta.env.VITE_API_URL}${page}`);
+      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`);
       const data = await response.json();
       setLoading(false);
       setCharacters(data.results);
